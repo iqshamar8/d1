@@ -1,0 +1,36 @@
+DOCTORCRM — DELIVERY PACKAGE
+================================
+Repo: https://github.com/iqshamar8/doccrm
+Commit: (current master)
+
+CONTENTS (doctorcrm only):
+- .env (Supabase keys + WhatsApp placeholders)
+- .env.example
+- .gitignore
+- .github/workflows/ci.yml
+- docs/ (ARCHITECTURE.md, DATABASE.md, DEPLOYMENT.md, FUTURE_MULTI_CLINIC.md, IMPLEMENTATION_PLAN.md, README.md, SECURITY.md, TESTING.md, WHATSAPP_SETUP.md)
+- next.config.ts
+- package.json / package-lock.json / eslint.config.mjs
+- src/app/page.tsx (RTL Arabic landing)
+- src/app/layout.tsx (lang="ar" dir="rtl")
+- src/app/middleware.ts
+- src/app/patients/page.tsx
+- src/app/appointments/page.tsx
+- src/app/payments/page.tsx
+- src/app/whatsapp/page.tsx
+- src/app/bot/page.tsx
+- src/app/settings/page.tsx
+- src/app/login/page.tsx
+- src/app/api/whatsapp/webhook/route.ts
+- src/app/api/reminders/route.ts
+- src/lib/services/patients.ts
+- src/lib/services/appointments.ts
+- src/lib/services/payments.ts
+- src/lib/services/bot.ts
+- src/lib/db/client.ts
+- supabase/migrations/001_init.sql (14 tables: clinics, profiles, patients, services, appointments, visits, payments, clinic_settings, whatsapp_conversations, whatsapp_messages, webhook_events, notification_jobs, audit_logs)
+- public/
+- tsconfig.json / next-env.d.ts
+
+Build: passes (TypeScript + Next.js compile OK)
+DB: migrations applied successfully
